@@ -6,17 +6,17 @@
 	"Description": "Just Extended User Settings",
 	"Category": "Other",
 	"CreatedBy": "Tino",
-	"CreatedByURL": "",
+	"CreatedByURL": "https://github.com/chunky-cat/ExtGameUserSettings",
 	"DocsURL": "",
 	"MarketplaceURL": "",
-	"SupportURL": "",
+	"SupportURL": "https://github.com/chunky-cat/ExtGameUserSettings",
 	"CanContainContent": true,
 	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
 	"Installed": false,
 	"Modules": [
 		{
-			"Name": "ExtUserSettings",
+			"Name": "ExtGameUserSettings",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		}

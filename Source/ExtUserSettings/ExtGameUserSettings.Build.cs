@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class ExtUserSettings : ModuleRules
+public class ExtGameUserSettings : ModuleRules
 {
-	public ExtUserSettings(ReadOnlyTargetRules Target) : base(Target)
+	public ExtGameUserSettings(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 		

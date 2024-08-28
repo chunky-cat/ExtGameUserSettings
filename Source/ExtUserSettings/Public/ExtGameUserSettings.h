@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameUserSettings.h"
+#include "Modules/ModuleManager.h"
 #include "ExtGameUserSettings.generated.h"
 
 
@@ -16,7 +17,7 @@ enum class EAudioVolumeSettingsType : uint8
 };
 
 UCLASS()
-class EXTUSERSETTINGS_API UExtGameUserSettings : public UGameUserSettings
+class EXTGAMEUSERSETTINGS_API UExtGameUserSettings : public UGameUserSettings
 {
 	GENERATED_UCLASS_BODY()
 public:
@@ -37,4 +38,15 @@ protected:
 	UPROPERTY(Config) float AudioVolumeMaster = 1;
 	UPROPERTY(Config) float AudioVolumeMusic = 1;
 	UPROPERTY(Config) float AudioVolumeEffects = 1;
+};
+
+////////////////// PLUGIN RELATED //////////////////////
+
+class FExtGameUserSettingsModule : public IModuleInterface
+{
+public:
+
+	/** IModuleInterface implementation */
+	virtual void StartupModule() override;
+	virtual void ShutdownModule() override;
 };
