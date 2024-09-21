@@ -3,11 +3,14 @@
 
 #include "ExtGameUserSettings.h"
 
+#include "Internationalization/Culture.h"
+
 UExtGameUserSettings::UExtGameUserSettings(const FObjectInitializer& ObjectInitializer): Super(ObjectInitializer)
 {
 	AudioVolumeMaster = 1.0f;
 	AudioVolumeMusic = 1.0f;
 	AudioVolumeEffects = 1.0f;
+	Culture = FInternationalization::Get().GetCurrentLanguage()->GetName();
 }
 
 float UExtGameUserSettings::GetAudioVolume(EAudioVolumeSettingsType Type) const
@@ -39,6 +42,12 @@ void UExtGameUserSettings::SetAudioVolume(EAudioVolumeSettingsType Type, float V
 			break;
 		default: break;
 	}
+}
+
+void UExtGameUserSettings::SetCulture(FString value)
+{
+	Culture = value;
+	FInternationalization::Get().SetCurrentCulture(value);
 }
 
 UExtGameUserSettings* UExtGameUserSettings::GetExtGameUserSettings()

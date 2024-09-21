@@ -20,24 +20,29 @@ UCLASS()
 class EXTGAMEUSERSETTINGS_API UExtGameUserSettings : public UGameUserSettings
 {
 	GENERATED_UCLASS_BODY()
-public:
+
+public: 
+	UFUNCTION(BlueprintCallable) static UExtGameUserSettings* GetExtGameUserSettings();
+
 	/// Getter
 	UFUNCTION(BlueprintCallable) float GetAudioVolume(EAudioVolumeSettingsType Type ) const;
 	UFUNCTION(BlueprintCallable) float GetAudioVolumeMaster( ) const { return AudioVolumeMaster; };
 	UFUNCTION(BlueprintCallable) float GetAudioVolumeMusic() const { return AudioVolumeMusic; };
 	UFUNCTION(BlueprintCallable) float GetAudioVolumeEffects() const  { return AudioVolumeEffects; };
+	UFUNCTION(BlueprintCallable) FString GetCulture() const  { return Culture; };
+
 	/// Setter
 	UFUNCTION(BlueprintCallable) void SetAudioVolume(EAudioVolumeSettingsType Type, float Value );
 	UFUNCTION(BlueprintCallable) void SetAudioVolumeMaster(float value) { AudioVolumeMaster = value; };
 	UFUNCTION(BlueprintCallable) void SetAudioVolumeMusic(float value) { AudioVolumeMusic = value; };
 	UFUNCTION(BlueprintCallable) void SetAudioVolumeEffects(float value) { AudioVolumeEffects = value; };
-
-	
-	UFUNCTION(BlueprintCallable) static UExtGameUserSettings* GetExtGameUserSettings();
+	UFUNCTION(BlueprintCallable) void SetCulture(FString value);
 protected:
 	UPROPERTY(Config) float AudioVolumeMaster = 1;
 	UPROPERTY(Config) float AudioVolumeMusic = 1;
 	UPROPERTY(Config) float AudioVolumeEffects = 1;
+
+	UPROPERTY(Config) FString Culture;
 };
 
 ////////////////// PLUGIN RELATED //////////////////////
