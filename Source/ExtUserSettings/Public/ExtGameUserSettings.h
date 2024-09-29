@@ -33,10 +33,10 @@ public:
 
 	/// Setter
 	UFUNCTION(BlueprintCallable, Category="ExtGameUserSettings") void SetAudioVolume(EAudioVolumeSettingsType Type, float Value );
-	UFUNCTION(BlueprintCallable, Category="ExtGameUserSettings") void SetAudioVolumeMaster(float value) { AudioVolumeMaster = value; };
-	UFUNCTION(BlueprintCallable, Category="ExtGameUserSettings") void SetAudioVolumeMusic(float value) { AudioVolumeMusic = value; };
-	UFUNCTION(BlueprintCallable, Category="ExtGameUserSettings") void SetAudioVolumeEffects(float value) { AudioVolumeEffects = value; };
-	UFUNCTION(BlueprintCallable, Category="ExtGameUserSettings") void SetCulture(FString value);
+	UFUNCTION(BlueprintCallable, Category="ExtGameUserSettings") void SetAudioVolumeMaster(const float Value) { AudioVolumeMaster = Value; };
+	UFUNCTION(BlueprintCallable, Category="ExtGameUserSettings") void SetAudioVolumeMusic(const float Value) { AudioVolumeMusic = Value; };
+	UFUNCTION(BlueprintCallable, Category="ExtGameUserSettings") void SetAudioVolumeEffects(const float Value) { AudioVolumeEffects = Value; };
+	UFUNCTION(BlueprintCallable, Category="ExtGameUserSettings") void SetCulture(FString Value);
 protected:
 	UPROPERTY(Config) float AudioVolumeMaster = 1;
 	UPROPERTY(Config) float AudioVolumeMusic = 1;

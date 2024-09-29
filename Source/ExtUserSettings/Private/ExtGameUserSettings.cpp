@@ -44,10 +44,10 @@ void UExtGameUserSettings::SetAudioVolume(EAudioVolumeSettingsType Type, float V
 	}
 }
 
-void UExtGameUserSettings::SetCulture(FString value)
+void UExtGameUserSettings::SetCulture(FString Value)
 {
-	Culture = value;
-	FInternationalization::Get().SetCurrentCulture(value);
+	Culture = Value;
+	FInternationalization::Get().SetCurrentCulture(Value);
 }
 
 UExtGameUserSettings* UExtGameUserSettings::GetExtGameUserSettings()
