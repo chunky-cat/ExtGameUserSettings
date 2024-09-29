@@ -22,21 +22,21 @@ class EXTGAMEUSERSETTINGS_API UExtGameUserSettings : public UGameUserSettings
 	GENERATED_UCLASS_BODY()
 
 public: 
-	UFUNCTION(BlueprintCallable) static UExtGameUserSettings* GetExtGameUserSettings();
+	UFUNCTION(BlueprintCallable, Category="ExtGameUserSettings") static UExtGameUserSettings* GetExtGameUserSettings();
 
 	/// Getter
-	UFUNCTION(BlueprintCallable) float GetAudioVolume(EAudioVolumeSettingsType Type ) const;
-	UFUNCTION(BlueprintCallable) float GetAudioVolumeMaster( ) const { return AudioVolumeMaster; };
-	UFUNCTION(BlueprintCallable) float GetAudioVolumeMusic() const { return AudioVolumeMusic; };
-	UFUNCTION(BlueprintCallable) float GetAudioVolumeEffects() const  { return AudioVolumeEffects; };
-	UFUNCTION(BlueprintCallable) FString GetCulture() const  { return Culture; };
+	UFUNCTION(BlueprintCallable, Category="ExtGameUserSettings") float GetAudioVolume(EAudioVolumeSettingsType Type ) const;
+	UFUNCTION(BlueprintCallable, Category="ExtGameUserSettings") float GetAudioVolumeMaster( ) const { return AudioVolumeMaster; };
+	UFUNCTION(BlueprintCallable, Category="ExtGameUserSettings") float GetAudioVolumeMusic() const { return AudioVolumeMusic; };
+	UFUNCTION(BlueprintCallable, Category="ExtGameUserSettings") float GetAudioVolumeEffects() const  { return AudioVolumeEffects; };
+	UFUNCTION(BlueprintCallable, Category="ExtGameUserSettings") FString GetCulture() const  { return Culture; };
 
 	/// Setter
-	UFUNCTION(BlueprintCallable) void SetAudioVolume(EAudioVolumeSettingsType Type, float Value );
-	UFUNCTION(BlueprintCallable) void SetAudioVolumeMaster(float value) { AudioVolumeMaster = value; };
-	UFUNCTION(BlueprintCallable) void SetAudioVolumeMusic(float value) { AudioVolumeMusic = value; };
-	UFUNCTION(BlueprintCallable) void SetAudioVolumeEffects(float value) { AudioVolumeEffects = value; };
-	UFUNCTION(BlueprintCallable) void SetCulture(FString value);
+	UFUNCTION(BlueprintCallable, Category="ExtGameUserSettings") void SetAudioVolume(EAudioVolumeSettingsType Type, float Value );
+	UFUNCTION(BlueprintCallable, Category="ExtGameUserSettings") void SetAudioVolumeMaster(float value) { AudioVolumeMaster = value; };
+	UFUNCTION(BlueprintCallable, Category="ExtGameUserSettings") void SetAudioVolumeMusic(float value) { AudioVolumeMusic = value; };
+	UFUNCTION(BlueprintCallable, Category="ExtGameUserSettings") void SetAudioVolumeEffects(float value) { AudioVolumeEffects = value; };
+	UFUNCTION(BlueprintCallable, Category="ExtGameUserSettings") void SetCulture(FString value);
 protected:
 	UPROPERTY(Config) float AudioVolumeMaster = 1;
 	UPROPERTY(Config) float AudioVolumeMusic = 1;

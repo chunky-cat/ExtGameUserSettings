@@ -10,15 +10,8 @@
 	"DocsURL": "",
 	"MarketplaceURL": "",
 	"SupportURL": "https://github.com/chunky-cat/ExtGameUserSettings",
-	"CanContainContent": true,
+	"CanContainContent": false,
 	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
-	"Installed": false,
-	"Modules": [
-		{
-			"Name": "ExtGameUserSettings",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		}
-	]
+	"Installed": false
 }
